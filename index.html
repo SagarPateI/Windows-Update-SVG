@@ -4,9 +4,6 @@
 <head>
     <title>Windows 10</title>
     <link rel="stylesheet" href="./index.css"></link>
-</head>
-
-<body>
     <svg id="entireWindow">
         <g>
             <title>Windows Update</title>
@@ -24,21 +21,33 @@
             <rect fill="#ffffff" stroke="#ffffff" stroke-width="2" x="296" y="188" width="120" height="35" id="svg_10" fill-opacity="0"/>
             <text fill="#ffffff" stroke="#ffffff" stroke-width="0" x="308" y="213" id="svg_13" font-size="20" font-family="'Cabin'" text-anchor="start" xml:space="preserve">Pick a time</text>
         </g>
-        <g id="button2">
+        <!-- <g id="button2"> -->
             <!-- Button 2 -->
             <!-- <rect fill="#ffffff" stroke="#ffffff" stroke-width="2" x="445" y="188" width="163" height="35" id="svg_11" fill-opacity="0"/> -->
-            <rect id="button2background"/>
-            <text id="button2text" font-size="20" dy="25" dx="9">Remind me later</text>
-        </g>
+            <!-- <rect id="button2background"/> -->
+            <!-- <text id="button2text" font-size="20" dy="25" dx="9">Remind me later</text> -->
+        <!-- </g> -->
         <g id="button3">
             <!-- Button 3 -->
             <rect fill="#ffffff" stroke="#ffffff" stroke-width="2" x="638" y="188" width="123" height="35" id="svg_12" fill-opacity="0"/>
             <text fill="#ffffff" stroke="#ffffff" stroke-width="0" x="647" y="213" id="svg_15" font-size="20" font-family="'Cabin'" text-anchor="start" xml:space="preserve">Restart now</text>
         </g>
     </svg>
+</head>
 
-    
-    <div id="button2"></div>
+<body>    
+    <div>
+        <svg id="button2window">
+            <g>
+                <title>Button Two Only</title>
+            <g id="button2">
+                <!-- Button 2 -->
+                <!-- <rect fill="#ffffff" stroke="#ffffff" stroke-width="2" x="445" y="188" width="163" height="35" id="svg_11" fill-opacity="0"/> -->
+                <rect id="button2background"/>
+                <text id="button2text" font-size="20">Remind me later</text>
+            </g>
+        </svg>
+    </div>
     <script src="./index.js"></script>
 </body>
 

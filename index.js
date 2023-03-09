@@ -4,18 +4,17 @@ var button = document.getElementById("button2");
 
 // Listen for the mouse position
 document.addEventListener("mousemove", function (event) {
- 
+
     // Get the current position of the button
     // var x = parseInt(window.getComputedStyle(button).getPropertyValue("left"));
     // var y = parseInt(window.getComputedStyle(button).getPropertyValue("top"));
-    var currentTransformation = String(button.style.transform);
-    console.log(currentTransformation);
+    
     var transformValue = window.getComputedStyle(button).getPropertyValue("transform");
-    console.log(transformValue)
+    console.log(transformValue);
     var xyValues = transformValue.match(/-?\d+\.?\d*/g);
     var x = parseInt(xyValues[4]);
     var y = parseInt(xyValues[5]); 
-    console.log(x, y)
+    console.log(x, y);
 
 
     // Calculate the distance between the button and the cursor
@@ -30,7 +29,7 @@ document.addEventListener("mousemove", function (event) {
         // Update the position of the button
         // button.style.left = newX + "px";
         // button.style.top = newY + "px";
-        button.style.transform = 'translateX(${newX}%) translateY(${newY}%)';
+        button.style.transform = "translateX(${newX}%) translateY(${newY}%)";
     }
 });
 
