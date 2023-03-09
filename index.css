@@ -1,0 +1,46 @@
+body {
+    background-color: #fcfcfc;
+}
+
+#updateDialogue {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 795px;
+    height: 258px;
+}
+
+#runaway {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50px;
+    width: 50px;
+    background-color: #ff0000;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+#button2 {
+    position: absolute;
+    /* background-color: #ffffff; */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+#runaway:hover {
+    background-color: #ffffff;
+    opacity: 0.7;
+}
+
+#runaway:hover {
+    background-color: #ff7f50;
+}
+
+text {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
