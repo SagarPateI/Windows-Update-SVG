@@ -3,10 +3,10 @@ body {
 }
 
 #entireWindow {
-    position: relative;
+    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 150%);
+    transform: translate(-50%, -50%);
     width: 791px;
     height: 254px;
     
@@ -31,7 +31,7 @@ body {
     /* position: absolute; */
     top: 50%;
     left: 50%;
-    transform: translate(56%, 74%);
+    transform: translate( 56%, 74%);
 
     background-color: #000000;
     cursor: pointer;
