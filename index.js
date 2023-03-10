@@ -1,5 +1,7 @@
 const box = document.getElementById('box');
 const text = document.getElementById('text');
+console.log(box);
+console.log(text);
 
 document.addEventListener('mousemove', (event) => {
     const mouseX = event.clientX;
