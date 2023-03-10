@@ -8,7 +8,9 @@ document.addEventListener("mousemove", function (event) {
     // Get the current position of the button
     // var x = parseInt(window.getComputedStyle(button).getPropertyValue("left"));
     // var y = parseInt(window.getComputedStyle(button).getPropertyValue("top"));
-    
+    var log = button.getBoundingClientRect();
+    console.log(log.top, log.right, log.bottom, log.left);
+
     var transformValue = window.getComputedStyle(button).getPropertyValue("transform");
     console.log(transformValue);
     var xyValues = transformValue.match(/-?\d+\.?\d*/g);
