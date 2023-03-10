@@ -1,6 +1,11 @@
 body {
     background-color: #00000034;
+    background-image: url('Images\Windows Desktop.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
 }
+/* Images\Windows Desktop.png */
 
 #entireWindow {
     position: absolute;
