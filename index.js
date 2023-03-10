@@ -1,37 +1,29 @@
-// Get the button element
-var button = document.getElementById("button2");
-//call button inside the function
+const box = document.getElementById('box');
+const text = document.getElementById('text');
 
-// Listen for the mouse position
-document.addEventListener("mousemove", function (event) {
+document.addEventListener('mousemove', (event) => {
+    const mouseX = event.clientX;
+    const mouseY = event.clientY;
 
-    // Get the current position of the button
-    // var x = parseInt(window.getComputedStyle(button).getPropertyValue("left"));
-    // var y = parseInt(window.getComputedStyle(button).getPropertyValue("top"));
-    var log = button.getBoundingClientRect();
-    console.log(log.top, log.right, log.bottom, log.left);
+    const boxX = parseFloat(box.getAttribute('x'));
+    const boxY = parseFloat(box.getAttribute('y'));
 
-    var transformValue = window.getComputedStyle(button).getPropertyValue("transform");
-    console.log(transformValue);
-    var xyValues = transformValue.match(/-?\d+\.?\d*/g);
-    var x = parseInt(xyValues[4]);
-    var y = parseInt(xyValues[5]); 
-    console.log(x, y);
+    const dx = boxX - mouseX; // arbitrary adjustments
+    const dy = boxY - mouseY;
 
+    const dist = Math.sqrt(dx * dx + dy * dy);
 
-    // Calculate the distance between the button and the cursor
-    var distance = Math.sqrt(Math.pow((x - event.clientX), 2) + Math.pow((y - event.clientY), 2));
-    console.log(distance)
-    // If the distance is less than 150 pixels, move the button away from the cursor
-    if (distance < 150) {
-        // Calculate the new position of the button
-        var newX = x + ((x - event.clientX) / distance) * 20;
-        var newY = y + ((y - event.clientY) / distance) * 20;
+    if (dist < 100) {
+        const newX = boxX + dx / dist * 10;
+        const newY = boxY + dy / dist * 10;
+        box.setAttribute('x', newX);
+        box.setAttribute('y', newY);
 
-        // Update the position of the button
-        // button.style.left = newX + "px";
-        // button.style.top = newY + "px";
-        button.style.transform = "translateX(${newX}%) translateY(${newY}%)";
+        // Keep the text inside the box
+        const textX = newX + box.getAttribute('width') / 2;
+        const textY = newY + box.getAttribute('height') / 2;
+        text.setAttribute('x', textX);
+        text.setAttribute('y', textY);
     }
 });
 
@@ -40,5 +32,5 @@ button.addEventListener("click", function () {
     // Reset the position of the button to the center of the screen
     button.style.left = "50%";
     button.style.top = "50%";
-    button.style.transform = 'translate(56%, 74%)';
+    // button.style.transform = 'translate(56%, 74%)';
 });

@@ -1,5 +1,5 @@
 body {
-    background-color: #fcfcfc;
+    background-color: #00000034;
 }
 
 #entireWindow {
@@ -43,7 +43,7 @@ body {
     transform: translate( 56%, 74%);
     /* transform: translate( 56%, 74%); */
 
-    background-color: #000000;
+    background-color: #ff0c0c;
     cursor: pointer;
     transition: all 0.3s ease-out;
 }
@@ -106,6 +106,7 @@ body {
 
 #box:hover {
     background-color: #ffffff;
+    fill: #ffffff80 ;
     opacity: 0.7;
 }
 
