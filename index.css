@@ -1,9 +1,5 @@
 body {
     background-color: #00000034;
-    background-image: url('.\Images\Windows Desktop.png'); 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat;
 }
 /* Images\Windows Desktop.png */
 
@@ -105,6 +101,7 @@ body {
 
 #box {
     background-color: #ff0000;
+    /* transform: translate( 50%, 50%); */
     cursor: pointer;
     transition: all 0.3s ease-out;
 }
@@ -117,6 +114,7 @@ body {
 
 #text {
     background-color: #ff0000;
+    /* transform: translate( 50%, 50%); */
     cursor: pointer;
     transition: all 0.3s ease-out;
 }
