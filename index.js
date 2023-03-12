@@ -1,7 +1,6 @@
 const box = document.getElementById('box');
 const text = document.getElementById('text');
-console.log(box);
-console.log(text);
+
 
 document.addEventListener('mousemove', (event) => {
     const mouseX = event.clientX;
@@ -9,6 +8,9 @@ document.addEventListener('mousemove', (event) => {
 
     const boxX = parseFloat(box.getAttribute('x'));
     const boxY = parseFloat(box.getAttribute('y'));
+
+    console.log(boxX);
+    console.log(boxY);
 
     const dx = boxX - mouseX; // arbitrary adjustments
     const dy = boxY - mouseY;
